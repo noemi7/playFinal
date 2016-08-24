@@ -1,0 +1,31 @@
+/* CSS declarations go here */
+* {
+  padding: 20; 
+  margin: 20; 
+ }
+#myCanvas{
+ 
+ 	background:  #eee;
+ 	display: block;
+ 	margin: 0 auto;
+}   
+#botonInit{
+    margin-top: 40px;
+    margin-left: auto;
+    
+}/* CSS declarations go here */
+body {
+  font-family: sans-serif;
+  
+ 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+ 
+  padding: 0;
+  margin: 0;
+ 
+  font-size: 14px;
+}

@@ -1,0 +1,88 @@
+<head>
+  <title>play</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+<div class="row">
+{{#if currentUser}}
+  <div class="col-xs-2 col-sm-2">
+    {{>loginButtons}}
+    {{>menuOptions}}
+  </div>
+  <div id="idcv" class="col-xs-6 col-sm-6">
+    {{>canvas}}
+  </div>
+
+
+  <div class="col-xs-4 col-sm-4">
+
+    {{>score}}
+      </div>
+{{else}}
+      <div class="col-xs-6 col-sm-4">
+{{>loginButtons}}
+
+  </div>
+  {{/if}}
+
+  
+</div> 
+      
+      
+  
+</body>
+
+
+<template name="canvas">
+  <canvas id = "myCanvas" width = "480" height = "320"> </canvas>
+  
+</template>
+<template name="saveGame">
+    <button name="saveGame">Save Game</button>
+</template>
+
+<template name="menuOptions">
+
+<div id="sss">
+     <button type="button" id="new"  class="btn btn-success">Empezar</button>
+
+  </div>
+  <br><br><br><br>
+  <div class="panel panel-default" id="panel" style="display:none">
+  <div class="panel-heading" id="phead"></div>
+  <div class="panel-body" id="pbody">
+    
+  </div>
+</div>
+  
+</template>
+
+
+
+<template name="score">
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Lives</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each scores}}
+    <tr class="{{res}}"    >
+      <td>{{fecha}}</td>
+      <td>{{lives}}</td>
+      <td>{{score}}</td>
+    </tr>
+    {{/each}}
+
+
+    </tbody>
+  </table>
+
+    
+</template>
